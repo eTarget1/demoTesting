@@ -39,6 +39,7 @@
         "type": "android.emulator",
         "name": "Pixel_2_API_28"
       }
-    }
+    },
+    "test-runner": "jest"
   }
 }
