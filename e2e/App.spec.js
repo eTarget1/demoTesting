@@ -19,7 +19,7 @@ describe('Example', () => {
   });
 
   it.only('Should write into TextInput', async(done) =>{
-    await element(by.id('input')).typeText('Hello World!');
+    await element(by.id('input')).replaceText('Hello World!');
   });
 
   // it('should show hello screen after tap', async (done) => {
