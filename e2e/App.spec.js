@@ -18,6 +18,10 @@ describe('Example', () => {
     done();
   });
 
+  it.only('Should write into TextInput', async(done) =>{
+    await element(by.id('input')).typeText('Hello World!');
+  });
+
   // it('should show hello screen after tap', async (done) => {
   //   await element(by.id('hello_button')).tap();
   //   await expect(element(by.text('Hello!!!'))).toBeVisible();

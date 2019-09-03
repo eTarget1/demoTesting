@@ -15,8 +15,7 @@ import {
   Text,
   View,
   Button,
-  TextInput,
-  FlatList
+  TextInput
 } from 'react-native';
 //import { Counter } from './Counter';
 type Props ={};
@@ -40,6 +39,7 @@ export default class App extends Component<Props> {
           {this.state.buttonPressed ? "Running" : "Stopped"}
         </Text>
         <Button onPress={this.handleButtonPress} title="start" testID={"startButton"} />
+        <TextInput testID={"input"} style={styles.input}/>
       </View>
     );
   }
@@ -61,5 +61,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
+  },
+  input: {
+    width: "80%",
+    height: 40,
+    borderWidth: 1,
+    padding: 10
   },
 });
