@@ -23,24 +23,23 @@ type Props ={};
 export default class App extends Component<Props> {
   constructor(props) {
     super();
-    this.state = { buttonPressed: 0 };
+    this.state = { buttonPressed: false };
     this.handleButtonPress = this.handleButtonPress.bind(this);
   }
 
   handleButtonPress() {
-    this.setState({ buttonPressed: this.state.buttonPressed + 1 });
+    this.setState({ buttonPressed: true });
   }
-
   render() {
     return (
       <View style={styles.container}>
         <Text testID={"welcome"} style={styles.welcome}>
           Welcome to React Native!
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
+        <Text testID={"runningState"} style={styles.instructions}>
+          {this.state.buttonPressed ? "Running" : "Stopped"}
         </Text>
-        <Button title="start" testID={"startButton"} />
+        <Button onPress={this.handleButtonPress} title="start" testID={"startButton"} />
       </View>
     );
   }

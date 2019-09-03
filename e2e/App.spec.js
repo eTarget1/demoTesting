@@ -12,7 +12,9 @@ describe('Example', () => {
   });
 
   it('Should have a startButton', async(done) =>{
+    await expect(element(by.id('runningState'))).toHaveText('Stopped');
     await element(by.id('startButton')).tap();
+    await expect(element(by.id('runningState'))).toHaveText('Running');
     done();
   });
 
