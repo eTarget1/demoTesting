@@ -135,6 +135,7 @@ android {
         versionName "1.0"
         testBuildType System.getProperty('testBuildType', 'debug')  // This will later be used to control the test apk build type
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        
     }
     splits {
         abi {
@@ -157,7 +158,7 @@ android {
             signingConfig signingConfigs.debug
         }
         release {
-            minifyEnabled true 
+            minifyEnabled false 
             // Caution! In production, you need to generate your own keystore file.
             // see https://facebook.github.io/react-native/docs/signed-apk-android.
             signingConfig signingConfigs.debug
@@ -197,8 +198,12 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
     androidTestImplementation('com.wix:detox:+') { transitive = true } 
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     androidTestImplementation 'junit:junit:4.12'
-
+    implementation "androidx.annotation:annotation:1.1.0"
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     if (enableHermes) {
       def hermesPath = "../../node_modules/hermesvm/android/";
       debugImplementation files(hermesPath + "hermes-debug.aar")
