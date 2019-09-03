@@ -11,6 +11,11 @@ describe('Example', () => {
     done();
   });
 
+  it('Should have a startButton', async(done) =>{
+    await element(by.id('startButton')).tap();
+    done();
+  });
+
   // it('should show hello screen after tap', async (done) => {
   //   await element(by.id('hello_button')).tap();
   //   await expect(element(by.text('Hello!!!'))).toBeVisible();

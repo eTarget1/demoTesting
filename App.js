@@ -19,8 +19,8 @@ import {
   FlatList
 } from 'react-native';
 //import { Counter } from './Counter';
-
-export default class App extends Component {
+type Props ={};
+export default class App extends Component<Props> {
   constructor(props) {
     super();
     this.state = { buttonPressed: 0 };
@@ -37,6 +37,10 @@ export default class App extends Component {
         <Text testID={"welcome"} style={styles.welcome}>
           Welcome to React Native!
         </Text>
+        <Text style={styles.instructions}>
+          To get started, edit App.js
+        </Text>
+        <Button title="start" testID={"startButton"} />
       </View>
     );
   }

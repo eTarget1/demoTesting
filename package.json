@@ -18,6 +18,8 @@
     "@babel/preset-typescript": "^7.3.3",
     "@babel/runtime": "^7.5.5",
     "@react-native-community/eslint-config": "^0.0.5",
+    "@testing-library/jest-dom": "^4.1.0",
+    "@testing-library/jest-native": "^3.0.2",
     "babel-jest": "^24.9.0",
     "detox": "^14.0.3",
     "eslint": "^6.2.2",
