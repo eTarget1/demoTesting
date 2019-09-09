@@ -36,8 +36,10 @@ export default class App extends Component<Props> {
         <Text testID={"welcome"} style={styles.welcome}>
           Welcome to React Native!
         </Text>
-        <Counter value={this.state.buttonPressed} testID={"runningState"} style={styles.instructions} />
-        <Button onPress={this.handleButtonPress} title="start" testID={"startButton"} />
+        <View testID={'counterContainer'}>
+          <Counter value={this.state.buttonPressed} testID={"runningState"} style={styles.instructions} />
+          <Button onPress={this.handleButtonPress} title="Start" testID={"startButton"} />
+        </View>
         <TextInput testID={"input"} style={styles.input}/>
         <View style={styles.listContainer}>
           <FlatList
