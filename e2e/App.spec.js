@@ -38,9 +38,9 @@ describe('Example', () => {
     done();
   });
 
-  it.only('should scroll till list end', async () => {
-    await element(by.id('list')).scrollTo('bottom');
-    // await element(by.id('list')).swipe('up', 'slow');
+  it('should scroll till list end', async () => {
+    // await element(by.id('list')).scrollTo('bottom');
+    await element(by.id('list')).swipe('up', 'slow');
   });
 
   // it('should show hello screen after tap', async (done) => {
