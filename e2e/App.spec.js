@@ -1,3 +1,4 @@
+/* eslint-disable jest/no-focused-tests */
 /* eslint-disable quotes */
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-undef */
