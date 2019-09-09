@@ -38,6 +38,11 @@ describe('Example', () => {
     done();
   });
 
+  it.only('should scroll till list end', async () => {
+    await element(by.id('list')).scrollTo('bottom');
+    // await element(by.id('list')).swipe('up', 'slow');
+  });
+
   // it('should show hello screen after tap', async (done) => {
   //   await element(by.id('hello_button')).tap();
   //   await expect(element(by.text('Hello!!!'))).toBeVisible();
