@@ -18,7 +18,7 @@ import {
   TextInput,
   FlatList
 } from 'react-native';
-//import { Counter } from './Counter';
+import { Counter } from './Counter';
 type Props ={};
 export default class App extends Component<Props> {
   constructor(props) {
@@ -36,9 +36,7 @@ export default class App extends Component<Props> {
         <Text testID={"welcome"} style={styles.welcome}>
           Welcome to React Native!
         </Text>
-        <Text testID={"runningState"} style={styles.instructions}>
-          {this.state.buttonPressed.toString()}
-        </Text>
+        <Counter value={this.state.buttonPressed} testID={"runningState"} style={styles.instructions} />
         <Button onPress={this.handleButtonPress} title="start" testID={"startButton"} />
         <TextInput testID={"input"} style={styles.input}/>
         <View style={styles.listContainer}>
