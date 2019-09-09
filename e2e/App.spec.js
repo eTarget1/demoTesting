@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-undef */
 describe('Example', () => {
@@ -26,9 +27,15 @@ describe('Example', () => {
   });
 
   it('Should write into TextInput', async(done) =>{
-    await element(by.id('input')).typeText('Hello World!');
+    await element(by.id('input')).typeText("Hello World!");
     await element(by.id('input')).clearText();
-    await element(by.id('input')).typeText('Bye!');
+    await element(by.id("input")).typeText("Bye!");
+    done();
+  });
+
+  it('Should scroll the name by 1', async(done) =>{
+    await element(by.id('list')).scroll(100, 'down');
+    done();
   });
 
   // it('should show hello screen after tap', async (done) => {
