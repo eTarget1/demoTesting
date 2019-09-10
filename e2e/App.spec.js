@@ -13,7 +13,7 @@ describe('Example', () => {
     done();
   });
 
-  it.only('Should count to 1 if pressed once', async(done) =>{
+  it('Should count to 1 if pressed once', async(done) =>{
     await expect(element(by.id('runningState'))).toHaveText('0');
     await element(by.id('startButton').withAncestor(by.id('counterContainer'))).tap();
     await expect(element(by.id('runningState'))).toHaveText('1');

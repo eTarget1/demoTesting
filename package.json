@@ -5,7 +5,9 @@
   "scripts": {
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test:e2e": "detox test -c ios.sim.debug" ,
+    "test:e2e:build": "detox build -c ios.sim.debug"
   },
   "dependencies": {
     "babel-loader": "^8.0.6",
@@ -46,6 +48,7 @@
         "name": "Pixel_2_API_28"
       }
     },
-    "test-runner": "jest"
+    "test-runner": "jest",
+    "runner-config": "e2e/config.json"
   }
 }
